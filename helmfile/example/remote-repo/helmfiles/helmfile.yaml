@@ -3,10 +3,16 @@ namespace: {{ requiredEnv "NAMESPACE" }}
 repositories:
  - name: prometheus-community
    url: https://prometheus-community.github.io/helm-charts
+ - name: bitnami 
+   url: https://charts.bitnami.com/bitnami
 releases:
  - name: kube-prometheus-stack
    chart: prometheus-community/kube-prometheus-stack
    version: 41.7.3
    values:
-     - ../../values/monitoring/alert-manager-values.yaml
-    
+     - ../values/alert-manager-values.yaml
+ - name: wordpress
+   chart: bitnami/wordpress
+   version: 17.0.4
+   values:
+     - ../values/wordpress.yaml  

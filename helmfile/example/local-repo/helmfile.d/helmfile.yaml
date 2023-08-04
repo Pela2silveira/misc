@@ -3,8 +3,8 @@ missingFileHandler: Error
 namespace: {{ requiredEnv "NAMESPACE" }}
 helmfiles:
 #Actually this is another repo
-  - path: "git::https://github.com/Pela2silveira/misc@/helmfile/example/remote-repo/helmfiles/monitoring/prometheus.yaml"
+  - path: "git::https://github.com/Pela2silveira/misc@/helmfile/example/remote-repo/helmfiles/wordpress.yaml"
     selectors:
-    - name=kube-prometheus-stack
+    - name=wordpress
     values:
-    - ../values/kube-prometheus-stack/kube-prometheus-stack-alertmanager.yaml
+    - ../values/wordpress.yaml
