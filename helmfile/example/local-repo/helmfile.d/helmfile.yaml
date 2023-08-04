@@ -3,7 +3,7 @@ missingFileHandler: Error
 namespace: {{ requiredEnv "NAMESPACE" }}
 helmfiles:
 #Actually this is another repo
-  - path: "git::https://github.com/Pela2silveira/misc@/helmfile/example/remote-repo/helmfiles/wordpress.yaml"
+  - path: "git::https://github.com/Pela2silveira/misc@/helmfile/example/remote-repo/helmfiles/helmfile.yaml"
     selectors:
     - name=wordpress
     values:
