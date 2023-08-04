@@ -1,0 +1,10 @@
+helmBinary: helm
+missingFileHandler: Error
+namespace: {{ requiredEnv "NAMESPACE" }}
+helmfiles:
+#Actually this is another repo
+  - path: "git::ssh://git@gitlab.com/Pela2silveira/misc/tree/main/helmfile@/helmfile/example/remote-repo/helmfiles/monitoring/prometheus.yaml"
+    selectors:
+      name=kube-prometheus-stack
+    values:
+      ../values/kube-prometheus-stack/kube-prometheus-stack-alertmanager.yaml
