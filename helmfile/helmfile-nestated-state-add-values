@@ -1,1 +1,9 @@
 hello world
+
+git clone https://github.com/Pela2silveira/misc
+
+cd helmfile/example/local-repo
+
+set your context, I use kubeselect -> https://github.com/fatliverfreddy/kubeselect
+
+source variables.env
